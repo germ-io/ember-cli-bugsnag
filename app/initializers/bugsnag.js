@@ -7,7 +7,8 @@ var currentEnv = config.environment;
 export default {
   name: 'bugsnag-error-service',
 
-  initialize: function(container) {
+  initialize: function(applicationInstance) {
+    var container = applicationInstance.__container__;
     if (typeof Bugsnag === 'undefined') { return; }
 
     if (currentEnv !== 'test' && Bugsnag.notifyReleaseStages.indexOf(currentEnv) !== -1) {
