@@ -37,7 +37,7 @@ module.exports = {
       envArray = bugsnagConfig.notifyReleaseStages ? bugsnagConfig.notifyReleaseStages : [];
 
       content = [
-        '<script async="true"',
+        '<script',
         'src="' + libraryUrl + '" ',
         'data-appversion="' + config.currentRevision + '" ',
         'data-apikey="' + bugsnagConfig.apiKey + '">',
